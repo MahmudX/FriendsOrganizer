@@ -10,8 +10,8 @@ At the core of developing a data-driven WPF application is a thorough knowledge 
 
 ### App design screenshot 
 
-![App MainPage layout design in VisualStudio](./images/first_layout.png) 
+![App MainPage layout design in VisualStudio](https://raw.githubusercontent.com/MahmudX/FriendsOrganizer/master/Images/first_layout.png) 
 
 ### App running in the debug mode
 
-![App MainPage layout design in VisualStudio](./images/first_layout_running.png)
+![App MainPage layout design in VisualStudio](https://raw.githubusercontent.com/MahmudX/FriendsOrganizer/master/Images/first_layout_running.png)
