@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FriendsOrganizer.DataAccess\FriendsOrganizer.DataAccess.csproj" />
+    <ProjectReference Include="..\FriendsOrganizer.Model\FriendsOrganizer.Model.csproj" />
+  </ItemGroup>
+
+</Project>
