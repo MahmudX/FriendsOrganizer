@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\FriendsOrganizer.DataAccess\FriendsOrganizer.DataAccess.csproj" />
     <ProjectReference Include="..\FriendsOrganizer.Model\FriendsOrganizer.Model.csproj" />
   </ItemGroup>

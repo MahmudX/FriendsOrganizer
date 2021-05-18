@@ -1,20 +1,16 @@
 ﻿using System.Windows;
-using FriendsOrganizer.UI.Data;
-using FriendsOrganizer.UI.ViewModel;
+using Autofac;
+using FriendsOrganizer.UI.Startup;
 
 namespace FriendsOrganizer.UI
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
     public partial class App : Application
     {
         private void App_OnStartup(object sender, StartupEventArgs e)
         {
-            var mainWindow = new MainWindow(
-                new MainViewModel(
-                    new FriendDataService()));
-            mainWindow.Show();
+            var bootstrapper = new Bootstrapper();
+            var container = bootstrapper.Bootstrap();
+            container.Resolve<MainWindow>().Show();
         }
     }
 }
