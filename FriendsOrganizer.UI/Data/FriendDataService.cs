@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
-using FriendsOrganizer.DataAccess;
+﻿using FriendsOrganizer.DataAccess;
 using FriendsOrganizer.Model;
-using System;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace FriendsOrganizer.UI.Data
 {
@@ -17,8 +18,15 @@ namespace FriendsOrganizer.UI.Data
         }
         public async Task<List<Friend>> GetAllAsync()
         {
+            Stopwatch stopwatch = new();
+            stopwatch.Start();
             await using var ctx = contextCreator();
-            return await ctx.Friends.ToListAsync();
+            var res = await ctx.Friends.ToListAsync();
+            stopwatch.Stop();
+            Debug.WriteLine("=!====================================!=");
+            Debug.WriteLine(stopwatch.Elapsed);
+            Debug.WriteLine("=!====================================!=");
+            return res;
         }
     }
 }

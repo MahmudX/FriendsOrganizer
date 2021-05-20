@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using FriendsOrganizer.Model;
+﻿using FriendsOrganizer.Model;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
 namespace FriendsOrganizer.DataAccess
 {
     public class FriendOrganizerDbContext : DbContext

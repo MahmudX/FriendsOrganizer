@@ -6,7 +6,7 @@ namespace FriendsOrganizer.Model
     public class Friend
     {
         [Key]
-        public Guid Id { get; set; }
+        public Guid Id { get; init; }
         [Required]
         [StringLength(50)]
         public string FirstName { get; set; }

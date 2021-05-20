@@ -1,7 +1,7 @@
-﻿using System.Collections.ObjectModel;
-using System.Threading.Tasks;
-using FriendsOrganizer.Model;
+﻿using FriendsOrganizer.Model;
 using FriendsOrganizer.UI.Data;
+using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 
 namespace FriendsOrganizer.UI.ViewModel
 {
@@ -10,14 +10,14 @@ namespace FriendsOrganizer.UI.ViewModel
         private readonly IFriendDataService friendDataService;
         private Friend selectedFriend;
 
-        public ObservableCollection<Friend> Friends { get; set; }
+        public ObservableCollection<Friend> Friends { get; }
 
         public Friend SelectedFriend
         {
             get => selectedFriend;
             set
             {
-                selectedFriend = value; 
+                selectedFriend = value;
                 OnPropertyChanged();
             }
         }

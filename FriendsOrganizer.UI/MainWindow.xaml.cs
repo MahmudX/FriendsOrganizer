@@ -1,5 +1,5 @@
-﻿using System.Windows;
-using FriendsOrganizer.UI.ViewModel;
+﻿using FriendsOrganizer.UI.ViewModel;
+using System.Windows;
 
 namespace FriendsOrganizer.UI
 {
