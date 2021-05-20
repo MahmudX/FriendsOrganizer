@@ -1,10 +1,11 @@
-﻿using System;
+﻿using FriendsOrganizer.DataAccess;
+using FriendsOrganizer.Model;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FriendsOrganizer.DataAccess;
-using FriendsOrganizer.Model;
-using Microsoft.EntityFrameworkCore;
+using FriendsOrganizer.UI.Interfaces;
 
 namespace FriendsOrganizer.UI.Data
 {
@@ -23,7 +24,7 @@ namespace FriendsOrganizer.UI.Data
             return await ctx.Friends.AsNoTracking().Select(f =>
                 new LookupItem()
                 {
-                    Id = f.Id, 
+                    Id = f.Id,
                     DisplayMember = f.FirstName + " " + f.LastName
                 })
                 .ToListAsync();

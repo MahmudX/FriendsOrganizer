@@ -3,6 +3,7 @@ using FriendsOrganizer.Model;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Threading.Tasks;
+using FriendsOrganizer.UI.Interfaces;
 
 namespace FriendsOrganizer.UI.Data
 {

@@ -2,7 +2,7 @@
 using FriendsOrganizer.Model;
 using System.Threading.Tasks;
 
-namespace FriendsOrganizer.UI.Data
+namespace FriendsOrganizer.UI.Interfaces
 {
     public interface IFriendDataService
     {
