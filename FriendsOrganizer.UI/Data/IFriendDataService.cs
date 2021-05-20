@@ -1,11 +1,11 @@
-﻿using FriendsOrganizer.Model;
-using System.Collections.Generic;
+﻿using System;
+using FriendsOrganizer.Model;
 using System.Threading.Tasks;
 
 namespace FriendsOrganizer.UI.Data
 {
     public interface IFriendDataService
     {
-        Task<List<Friend>> GetAllAsync();
+        Task<Friend> GetByIdAsync(Guid id);
     }
 }

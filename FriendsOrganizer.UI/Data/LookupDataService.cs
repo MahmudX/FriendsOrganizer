@@ -20,14 +20,13 @@ namespace FriendsOrganizer.UI.Data
         public async Task<IEnumerable<LookupItem>> GetFriendLookupAsync()
         {
             await using var ctx = contextCreator();
-            var result = await ctx.Friends.AsNoTracking().Select(f =>
+            return await ctx.Friends.AsNoTracking().Select(f =>
                 new LookupItem()
                 {
                     Id = f.Id, 
                     DisplayMember = f.FirstName + " " + f.LastName
                 })
                 .ToListAsync();
-            return result;
         }
     }
 }

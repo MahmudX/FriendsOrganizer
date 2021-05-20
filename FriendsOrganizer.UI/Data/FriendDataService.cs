@@ -2,8 +2,6 @@
 using FriendsOrganizer.Model;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace FriendsOrganizer.UI.Data
@@ -16,17 +14,11 @@ namespace FriendsOrganizer.UI.Data
         {
             this.contextCreator = contextCreator;
         }
-        public async Task<List<Friend>> GetAllAsync()
+        public async Task<Friend> GetByIdAsync(Guid id)
         {
-            Stopwatch stopwatch = new();
-            stopwatch.Start();
             await using var ctx = contextCreator();
-            var res = await ctx.Friends.ToListAsync();
-            stopwatch.Stop();
-            Debug.WriteLine("=!====================================!=");
-            Debug.WriteLine(stopwatch.Elapsed);
-            Debug.WriteLine("=!====================================!=");
-            return res;
+
+            return await ctx.Friends.AsNoTracking().SingleAsync(f=>f.Id == id);
         }
     }
 }
