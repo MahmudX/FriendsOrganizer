@@ -3,6 +3,7 @@ using FriendsOrganizer.DataAccess;
 using FriendsOrganizer.UI.Data;
 using FriendsOrganizer.UI.Interfaces;
 using FriendsOrganizer.UI.ViewModel;
+using Prism.Events;
 
 namespace FriendsOrganizer.UI.Startup
 {
@@ -21,6 +22,8 @@ namespace FriendsOrganizer.UI.Startup
             builder.RegisterType<LookupDataService>().AsImplementedInterfaces();
             builder.RegisterType<FriendOrganizerDbContext>().AsSelf();
 
+
+            builder.RegisterType<EventAggregator>().As<IEventAggregator>().SingleInstance();
             return builder.Build();
         }
     }
